@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="indexx.css">
+</head>
+<body>
+    <section>
+        <div class="head_start">
+            <h1>HEALTHONUS</h1>
+        </div>
+        <nav class="navbar">
+            <ul  class="nav_ul">
+                <li style="margin-left: 25px;"><a href="#">HOME</a></li>
+                <li><button id="openPopup" type="button" onclick="openPopup()">+ADD</button></li>
+             </ul>
+             <div class="img">
+               <img src="blog-icon.png" alt=""/>
+             </div>
+        </nav>
+        <div class="data_block">
+            <h1>CONTACTS</h1>
+        </div>
+        <div class="data_blockOne">
+
+           
+            <div class="div_block">
+
+           
+            </div>
+            <div class="display_block">
+
+                <div class="displayBlock_flex">
+                    <div class="h1_flex">
+                         <h1 class="display_h1"></h1>
+                      <div class="button_flex">
+                        <div class="btnflex_one">
+                            <img class="edit_img" src="" alt="">
+                            <button class="editbtn" data-id onclick="editData(event)"></button>
+                        </div>
+                        <div class="btnflex_two">
+                            <img class="del_img" src="" alt="">
+                            <button class="delbtn" data-id onclick="delData(event)"></button>
+                        </div>
+                     </div>
+                </div>
+                </div>
+                <div>
+                        <h5 class="h5_one"></h5>
+                        <h5 class="h5_two"></h5>
+                        <h5 class="h5_three"></h5>
+                        <h5 class="h5_four"></h5>
+                        <h5 class="h5_five"></h5>
+                </div>
+          
+                
+            </div>
+           
+
+        </div>
+
+        <div class="main_div hide" onclick="closePopUp(event,true)">
+            <div class="section">
+                    <form class="form_div">
+                         <label for="name"> Name</label>
+                         <input type="text" id="name" name="firstname" onchange="return validateName(this,0)" >
+                         <span class="span_one">*</span>
+                         <label for="email">Email</label>
+                         <input type="email" id="email" name="email" onchange="return validateEmail(this,0)" >
+                         <span class="span_two">*</span>
+                    <div class="flex">
+                        <div>
+                         <label for="phone">Mobile</label>
+                         <input class="input_phone" type="number" id="phone" name="phone" onchange="return validatePhone(this,0)" >
+                         <span class="span_three">*</span>
+                        </div>
+                        <div>
+                         <label for="landline">Landline</label>
+                         <input class="input_landline" type="number" id="landline" name="landline" onchange="return validateLandline(this,0)">
+                         <span class="span_four">*</span>
+                        </div>
+                    </div>
+                         <label for="website">Website</label>
+                         <input type="text" id="website" name="website" onchange="return validateWebsite(this,0)">
+                         <span class="span_five">*</span>
+
+                         <label for="address">Address</label>
+                       <textarea id="address" name="address" rows="6" cols="61"  onchange="return validateTarea(this,0)"></textarea>
+                       <span class="span_six">*</span>
+                        <div class="flex_button">
+                        <input type="submit" value="+Add" class="button_class" id="btn" onclick="return closePopUp(event)"  ></input>
+                        </div>
+                        
+                    </form>
+            </div>
+        </div>
+        <div class="sub_div hide" onclick="EditPopUp(event,true)">
+            <div class="section_two">
+                    <form class="form_divTwo">
+                         <label for="name1"> Name</label>
+                         <input type="text" id="name1" name="firstname"  onchange="return validateName(this,1)">
+                         <span class="span_one">*</span>
+                         <label for="email1">Email</label>
+                         <input type="email" id="email1" name="email" onchange="return validateEmail(this,1)">
+                         <span class="span_two">*</span>
+                    <div class="flex">
+                        <div>
+                         <label for="phone1">Mobile</label>
+                         <input class="input_phone" type="number" id="phone1" name="phone"  onchange="return validatePhone(this,1)">
+                         <span class="span_three">*</span>
+                        </div>
+                        <div>
+                         <label for="landline1">Landline</label>
+                         <input class="input_landline" type="number" id="landline1" name="landline" onchange="return validateLandline(this,1)">
+                         <span class="span_four">*</span>
+                        </div>
+                    </div>
+                         <label for="website1">Website</label>
+                         <input type="text" id="website1" name="website" onchange="return validateWebsite(this,1)">
+                         <span class="span_five">*</span>
+
+                         <label for="address1">Address</label>
+                       <textarea id="address1" name="address" rows="6" cols="61" onchange="return validateTarea(this,1)"></textarea>
+                       <span class="span_six">*</span>
+                        <div class="flex_button">
+                        <input type="submit" value="+Add" class="editbutton_class" id="editAddbtn" onclick="return EditPopUp(event)"></input>
+                        </div>
+                        
+                    </form>
+            </div>
+        </div>
+    </section>
+    <script src="model.js"></script>
+    <script src="service.js"></script>
+    <script src="index.js"></script>
+   
+  
+  
+  
+</body>
+</html>
